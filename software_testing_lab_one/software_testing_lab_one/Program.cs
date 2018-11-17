@@ -14,7 +14,7 @@ namespace Laba_1
 
             var studentsGroupList = new List<Group> { new Group { GroupName = "Group №2", Students = students } };
 
-
+            //commit number one
             foreach (var item in students)
             {
                 Console.WriteLine("Average mark - " + item.FirstName + ": " + item.averageMarkStudent());
