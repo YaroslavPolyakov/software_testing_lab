@@ -15,6 +15,7 @@ namespace Laba_1
             var studentsGroupList = new List<Group> { new Group { GroupName = "Group №2", Students = students } };
 
             //commit number one
+            //commit number one in develop branch
             //commit number two
             //commit number three
 
