@@ -19,8 +19,6 @@ namespace Laba_1
             //commit number two
             //commit number two in develop branch
             //commit in develop branch
-            //change generic file
-            //commit number three
 
             foreach (var item in students)
             {
