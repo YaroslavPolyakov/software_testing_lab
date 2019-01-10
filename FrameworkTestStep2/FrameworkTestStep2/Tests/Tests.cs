@@ -28,78 +28,78 @@ namespace FrameworkTestStep2.Tests
 
 
         //Test #1
-        //[Test]
-        //public void WhenNotInputData()
-        //{
-        //    _steps.SelectPage();
-        //    _steps.SelectFirstTrip(CityMoscow, CityBarselona);
-        //    //steps.SelectDatesForBothSides();
-        //    Thread.Sleep(1000);
-        //    _steps.StartSearchTickets();
-        //    _status = _steps.SelectTicket();
+        [Test]
+        public void WhenNotInputData()
+        {
+            _steps.SelectPage();
+            _steps.SelectFirstTrip(CityMoscow, CityBarselona);
+            //steps.SelectDatesForBothSides();
+            Thread.Sleep(1000);
+            _steps.StartSearchTickets();
+            _status = _steps.SelectTicket();
 
-        //    Assert.AreNotEqual(false, _status);
-        //}
+            Assert.AreNotEqual(false, _status);
+        }
 
-        ////Test #2
-        //[Test]
-        //public void WhenSecondFlightEarlierThenFirst()
-        //{
-        //    _steps.SelectPage();
-        //    _steps.SelectFirstTrip(CityMoscow, CityBarselona);
-        //    _status = _steps.SelectPastDatesForBothSides();
+        //Test #2
+        [Test]
+        public void WhenSecondFlightEarlierThenFirst()
+        {
+            _steps.SelectPage();
+            _steps.SelectFirstTrip(CityMoscow, CityBarselona);
+            _status = _steps.SelectPastDatesForBothSides();
 
-        //    //if set the date for second flight is impossible 
-        //    Assert.AreEqual(false, _status);
-        //}
+            //if set the date for second flight is impossible 
+            Assert.AreEqual(false, _status);
+        }
 
-        ////Test #3
-        //[Test]
-        //public void WhenBabyMoreThenAdult()
-        //{
-        //    _steps.SelectPage();
-        //    _steps.SelectFirstTrip(CityBarselona, CityMoscow);
-        //    _status = _steps.SelectPassengers();
-        //    //if count of adults more or equal count if babies
-        //    Assert.AreEqual(true, _status);
-        //}
+        //Test #3
+        [Test]
+        public void WhenBabyMoreThenAdult()
+        {
+            _steps.SelectPage();
+            _steps.SelectFirstTrip(CityBarselona, CityMoscow);
+            _status = _steps.SelectPassengers();
+            //if count of adults more or equal count if babies
+            Assert.AreEqual(true, _status);
+        }
 
-        ////Test #4
-        //[Test]
-        //public void CheckSortOfSearchResult()
-        //{
-        //    _steps.SelectPage();
-        //    _steps.SelectFirstTrip(CityMoscow, CityBarselona);
-        //    //steps.SelectFirstTripDate();
-        //    _status = _steps.StartSearchTickets();
-        //    //System.Threading.Thread.Sleep(5000);
-        //    _steps.SelectSortByTime();
-        //    _status = _steps.CheckSortByTime();
+        //Test #4
+        [Test]
+        public void CheckSortOfSearchResult()
+        {
+            _steps.SelectPage();
+            _steps.SelectFirstTrip(CityMoscow, CityBarselona);
+            //steps.SelectFirstTripDate();
+            _status = _steps.StartSearchTickets();
+            //System.Threading.Thread.Sleep(5000);
+            _steps.SelectSortByTime();
+            _status = _steps.CheckSortByTime();
 
-        //    Assert.AreEqual(_status, true);
-        //}
+            Assert.AreEqual(_status, true);
+        }
 
-        ////Test #5
-        //[Test]
-        //public void WhenBabyWithoutAnyAdult()
-        //{
-        //    _steps.SelectPage();
-        //    _steps.SelectFirstTrip(CityBarselona, CityMoscow);
-        //    _status = _steps.SelectPassengersWithoutAdults();
-        //    //if count of babies equal count of adults
-        //    Assert.AreEqual(false, _status);
-        //}
+        //Test #5
+        [Test]
+        public void WhenBabyWithoutAnyAdult()
+        {
+            _steps.SelectPage();
+            _steps.SelectFirstTrip(CityBarselona, CityMoscow);
+            _status = _steps.SelectPassengersWithoutAdults();
+            //if count of babies equal count of adults
+            Assert.AreEqual(false, _status);
+        }
 
-        ////Test #6
-        //[Test]
-        //public void WhenFlightDateYesterday()
-        //{
-        //    _steps.SelectPage();
-        //    _steps.SelectFirstTrip(CityBarselona, CityMoscow);
-        //    _status = _steps.SelectDepartureDateInThePast();
-        //    _status = _steps.StartSearchTickets();
-        //    Assert.AreNotEqual(true, _status);
-        //}
+        //Test #6
+        [Test]
+        public void WhenFlightDateYesterday()
+        {
+            _steps.SelectPage();
+            _steps.SelectFirstTrip(CityBarselona, CityMoscow);
+            _status = _steps.SelectDepartureDateInThePast();
+            _status = _steps.StartSearchTickets();
+            Assert.AreNotEqual(true, _status);
+        }
 
         //Test #7
         [Test]
@@ -113,46 +113,46 @@ namespace FrameworkTestStep2.Tests
         }
 
         //Test #8
-        //[Test]
-        //public void CheckHistory()
-        //{
-        //    _steps.SelectPage();
-        //    _steps.SelectFirstTrip(CityMoscow, CityBarselona);
-        //    //steps.SelectDatesForBothSides();
-        //    Thread.Sleep(1000);
-        //    _steps.StartSearchTickets();
+        [Test]
+        public void CheckHistory()
+        {
+            _steps.SelectPage();
+            _steps.SelectFirstTrip(CityMoscow, CityBarselona);
+            //steps.SelectDatesForBothSides();
+            Thread.Sleep(1000);
+            _steps.StartSearchTickets();
 
-        //    _steps.SelectPage();
-        //    _steps.SelectFirstTrip(CityParis, CityPiter);
-        //    //steps.SelectDatesForBothSides();
-        //    Thread.Sleep(1000);
-        //    _steps.StartSearchTickets();
-        //    Thread.Sleep(2000);
-        //    _status = _steps.SelectHistory();
+            _steps.SelectPage();
+            _steps.SelectFirstTrip(CityParis, CityPiter);
+            //steps.SelectDatesForBothSides();
+            Thread.Sleep(1000);
+            _steps.StartSearchTickets();
+            Thread.Sleep(2000);
+            _status = _steps.SelectHistory();
 
-        //    Assert.AreNotEqual(false, _status);
-        //}
+            Assert.AreNotEqual(false, _status);
+        }
 
-        //[Test]
-        //public void CheckSortAmountOfSearchResult()
-        //{
-        //    _steps.SelectPage();
-        //    _steps.SelectFirstTrip(CityPiter, CityParis);
-        //    _status = _steps.StartSearchTickets();
-        //    //Thread.Sleep(8000);
-        //    _status = _steps.CheckSortByAmount();
+        [Test]
+        public void CheckSortAmountOfSearchResult()
+        {
+            _steps.SelectPage();
+            _steps.SelectFirstTrip(CityPiter, CityParis);
+            _status = _steps.StartSearchTickets();
+            //Thread.Sleep(8000);
+            _status = _steps.CheckSortByAmount();
 
-        //    Assert.AreEqual(_status, true);
-        //}
+            Assert.AreEqual(_status, true);
+        }
 
-        ////Test #10
-        //[Test]
-        //public void WhenPassageersMoreThenSits()
-        //{
-        //    _steps.SelectPage();
-        //    _steps.SelectFirstTrip(CityMoscow, CityBarselona);
-        //    _status = _steps.SelectMorePassengers();
-        //    Assert.AreEqual(false, _status);
-        //}
+        //Test #10
+        [Test]
+        public void WhenPassageersMoreThenSits()
+        {
+            _steps.SelectPage();
+            _steps.SelectFirstTrip(CityMoscow, CityBarselona);
+            _status = _steps.SelectMorePassengers();
+            Assert.AreEqual(false, _status);
+        }
     }
 }
