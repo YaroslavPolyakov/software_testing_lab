@@ -156,16 +156,34 @@ namespace FrameworkTestStep2.Step
             Page.ResultPage selectPage = new Page.ResultPage(_driver);
             selectPage.StartSort();
         }
-        public void SelectTicket()
+        public bool SelectTicket()
         {
             Page.ResultPage selectPage = new Page.ResultPage(_driver);
-            selectPage.ClickTicket();
+            try
+            {
+                selectPage.ClickTicket();
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+
+            return true;
         }
 
-        public void SelectHistory()
+        public bool SelectHistory()
         {
             Page.MainPage selectPage = new Page.MainPage(_driver);
-            selectPage.SelectHistory();
+            try
+            {
+                selectPage.SelectHistory();
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+
+            return true;
         }
     }
 }

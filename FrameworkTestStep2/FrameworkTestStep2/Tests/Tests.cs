@@ -1,10 +1,10 @@
 ﻿using System.Threading;
 using NUnit.Framework;
 
-namespace FrameworkTestStep2.Test
+namespace FrameworkTestStep2.Tests
 {
     [TestFixture]
-    class Test
+    class Tests
     {
         private readonly Step.Step _steps = new Step.Step();
         private const string CityMoscow = "Москва";
@@ -36,9 +36,9 @@ namespace FrameworkTestStep2.Test
             //steps.SelectDatesForBothSides();
             Thread.Sleep(1000);
             _steps.StartSearchTickets();
-            _steps.SelectTicket();
+            _status = _steps.SelectTicket();
 
-            Assert.AreEqual(false, _status);
+            Assert.AreNotEqual(false, _status);
         }
 
         //Test #2
@@ -129,9 +129,9 @@ namespace FrameworkTestStep2.Test
             Thread.Sleep(1000);
             _steps.StartSearchTickets();
             Thread.Sleep(2000);
-            _steps.SelectHistory();
+            _status = _steps.SelectHistory();
 
-            Assert.AreEqual(false, _status);
+            Assert.AreNotEqual(false, _status);
         }
 
         [Test]
