@@ -74,7 +74,6 @@ namespace FrameworkTestStep2.Tests
             _status = _steps.StartSearchTickets();
             //System.Threading.Thread.Sleep(5000);
             _steps.SelectSortByTime();
-            //Thread.Sleep(8000);
             _status = _steps.CheckSortByTime();
 
             Assert.AreEqual(_status, true);
